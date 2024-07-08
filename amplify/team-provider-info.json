@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-inamblogproject-dev-d6ddc-authRole",
+      "UnauthRoleArn": "arn:aws:iam::812096089383:role/amplify-inamblogproject-dev-d6ddc-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::812096089383:role/amplify-inamblogproject-dev-d6ddc-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-inamblogproject-dev-d6ddc-deployment",
+      "UnauthRoleName": "amplify-inamblogproject-dev-d6ddc-unauthRole",
+      "StackName": "amplify-inamblogproject-dev-d6ddc",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:812096089383:stack/amplify-inamblogproject-dev-d6ddc/aeb63e40-39ce-11ef-afe9-061f906d3db3",
+      "AmplifyAppId": "d109dj4ocj2f49"
+    },
+    "categories": {
+      "auth": {
+        "inamblogprojectbb1b7218": {}
+      },
+      "storage": {
+        "inamBlogApplication": {}
+      },
+      "api": {
+        "inamblogproject": {}
+      },
+      "function": {
+        "userSignUpTriggerInam": {
+          "deploymentBucketName": "amplify-inamblogproject-dev-d6ddc-deployment",
+          "s3Key": "amplify-builds/userSignUpTriggerInam-366d6548454645314363-build.zip"
+        }
+      }
+    }
+  }
+}

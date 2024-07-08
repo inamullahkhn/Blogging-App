@@ -1,0 +1,18 @@
+{
+  "resourceName": "inamBlogApplication",
+  "policyUUID": "117522b5",
+  "bucketName": "inamblogapplication",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
