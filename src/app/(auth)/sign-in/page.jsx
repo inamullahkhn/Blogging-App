@@ -1,14 +1,17 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Auth } from 'aws-amplify'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { useUserContext } from '@/app/context/userContext'
 
 const SignIn = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [show, setShow] = useState(false)
   const router = useRouter()
+
+  // const { fetchUser } = useUserContext()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -19,7 +22,7 @@ const SignIn = () => {
           username: email,
           password: password,
         })
-        console.log(response)
+        // console.log(response)
         if (response) router.push('/posts')
       } catch (error) {
         console.log('error signing up:', error)

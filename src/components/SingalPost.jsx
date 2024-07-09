@@ -1,33 +1,47 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import Comment from './Comment'
 import CommentForm from './CommentForm'
+import { API, graphqlOperation } from 'aws-amplify'
+import { getBlogPost } from '@/graphql/queries'
+import { useParams } from 'next/navigation'
+import { StorageImage } from '@aws-amplify/ui-react-storage'
 
 const SingalPost = () => {
+  const [catdata, setCatData] = useState(null)
+  const { id } = useParams()
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const { data } = await API.graphql(graphqlOperation(getBlogPost, { id: id }))
+        setCatData(data.getBlogPost)
+        console.log(data)
+      } catch (error) {
+        console.error('Error fetching single post:', error)
+      }
+    }
+    fetchPosts()
+  }, [])
+
   return (
     <div className='flex'>
       <div className='w-[1128px]'>
         <div className='p-3 bg-[#F5F5F5] rounded-lg  '>
-          <p className='text-2xl text-black font-medium p-1 '>
-            How to Spend the Perfect Day on Croatia’s Most Magical Island
-          </p>
-          <img src='/popular/ocean.png' className='w-full h-[590px] rounded-lg' />
+          <p className='text-2xl text-black font-medium p-1 '>{catdata?.title}</p>
+          {/* <img src='/popular/ocean.png' className='w-full h-[590px] rounded-lg' /> */}
+          <StorageImage imgKey={catdata?.post_img || '/popular/ocean.png'} className='w-full h-[590px] rounded-lg' />
         </div>
         <p className='text-[22px] p-2 font-semibold text-[#3E3232]'>
           Don’t wait. The purpose of our lives is to be happy!
         </p>
-        <p className='p-3 text-[20px] text-sm text-[#3E3232] font-normal'>
-          Upon arrival, your senses will be rewarded with the pleasant scent of lemongrass oil used to clean the natural
-          wood found throughout the room, creating a relaxing atmosphere within the space. A wonderful serenity has
-          taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I
-          am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I
-          am so happy, my dear friend, so absorbed in the exquisite.
-        </p>
+        <p className='p-3 text-[20px] text-sm text-[#3E3232] font-normal'>{catdata?.explantion}</p>
         <div className='flex justify-center'>
           <img src='/popular/car1.png' className='w-[872px] h-[486px] rounded-lg py-1' />
         </div>
-        <p className='text-[22px] p-2 font-semibold text-[#3E3232]'>
+        {/* <p className='text-[22px] p-2 font-semibold text-[#3E3232]'>
           Not how long, but how well you have lived is the main thing.
-        </p>
+        </p> */}
         <p className='p-3 text-[20px] text-sm text-[#3E3232] font-normal'>
           When you are ready to indulge your sense of excitement, check out the range of water- sports opportunities at
           the resort’s on-site water-sports center. Want to leave your stress on the water? The resort has kayaks,
@@ -44,10 +58,10 @@ const SingalPost = () => {
           area available for guests to enjoy.
         </p>
         <div>
-          <Comment />
+          <Comment postId={catdata?.id} />
         </div>
         <div>
-          <CommentForm />
+          <CommentForm postId={catdata?.id} />
         </div>
       </div>
       <div className='w-[182]'></div>

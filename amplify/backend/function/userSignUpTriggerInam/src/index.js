@@ -17,15 +17,14 @@ exports.handler = async (event) => {
           user_pic: event.request.userAttributes.profile,
           banner_pic: event.request.userAttributes.picture,
           createdAt: new Date().toISOString(),
-          createdBy: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
         },
       })
       .promise()
-    console.info(`Successfully executed put in ${process.env.TABLE_NAME}`)
+    console.info(`Successfully executed put in ${process.env.UserTable}`)
     return event
   } catch (err) {
     console.error(err)
     throw err
   }
-  return event
 }

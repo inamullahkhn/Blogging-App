@@ -1,3 +1,4 @@
+'use client'
 import Banner from '@/components/Banner'
 import PostCards from '@/components/PostCards'
 import React from 'react'

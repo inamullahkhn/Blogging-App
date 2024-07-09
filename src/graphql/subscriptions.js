@@ -12,18 +12,950 @@ export const onCreateBlogUser = /* GraphQL */ `
       banner_pic
       user_pic
       posts {
+        items {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         nextToken
         __typename
       }
       categories {
+        items {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
         nextToken
         __typename
       }
       comments {
+        items {
+          id
+          name
+          website
+          email
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCommentsId
+          blogPostCommentsId
+          __typename
+        }
         nextToken
         __typename
       }
       replies {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -44,18 +976,950 @@ export const onUpdateBlogUser = /* GraphQL */ `
       banner_pic
       user_pic
       posts {
+        items {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         nextToken
         __typename
       }
       categories {
+        items {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
         nextToken
         __typename
       }
       comments {
+        items {
+          id
+          name
+          website
+          email
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCommentsId
+          blogPostCommentsId
+          __typename
+        }
         nextToken
         __typename
       }
       replies {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -76,18 +1940,950 @@ export const onDeleteBlogUser = /* GraphQL */ `
       banner_pic
       user_pic
       posts {
+        items {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         nextToken
         __typename
       }
       categories {
+        items {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
         nextToken
         __typename
       }
       comments {
+        items {
+          id
+          name
+          website
+          email
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCommentsId
+          blogPostCommentsId
+          __typename
+        }
         nextToken
         __typename
       }
       replies {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -113,6 +2909,409 @@ export const onCreateBlogPost = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
@@ -121,7 +3320,306 @@ export const onCreateBlogPost = /* GraphQL */ `
       category {
         id
         title
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserCategoriesId
@@ -129,6 +3627,556 @@ export const onCreateBlogPost = /* GraphQL */ `
       }
       categoryId
       comments {
+        items {
+          id
+          name
+          website
+          email
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCommentsId
+          blogPostCommentsId
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      replycomments {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -156,6 +4204,409 @@ export const onUpdateBlogPost = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
@@ -164,7 +4615,306 @@ export const onUpdateBlogPost = /* GraphQL */ `
       category {
         id
         title
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserCategoriesId
@@ -172,6 +4922,556 @@ export const onUpdateBlogPost = /* GraphQL */ `
       }
       categoryId
       comments {
+        items {
+          id
+          name
+          website
+          email
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCommentsId
+          blogPostCommentsId
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      replycomments {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -199,6 +5499,409 @@ export const onDeleteBlogPost = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
@@ -207,7 +5910,306 @@ export const onDeleteBlogPost = /* GraphQL */ `
       category {
         id
         title
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserCategoriesId
@@ -215,6 +6217,556 @@ export const onDeleteBlogPost = /* GraphQL */ `
       }
       categoryId
       comments {
+        items {
+          id
+          name
+          website
+          email
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCommentsId
+          blogPostCommentsId
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      replycomments {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -244,6 +6796,409 @@ export const onCreateBlogComment = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
@@ -255,8 +7210,573 @@ export const onCreateBlogComment = /* GraphQL */ `
         tags
         post_img
         explanation
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        category {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
         categoryId
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserPostsId
@@ -265,6 +7785,301 @@ export const onCreateBlogComment = /* GraphQL */ `
       }
       postId
       replycomments {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -294,6 +8109,409 @@ export const onUpdateBlogComment = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
@@ -305,8 +8523,573 @@ export const onUpdateBlogComment = /* GraphQL */ `
         tags
         post_img
         explanation
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        category {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
         categoryId
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserPostsId
@@ -315,6 +9098,301 @@ export const onUpdateBlogComment = /* GraphQL */ `
       }
       postId
       replycomments {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -344,6 +9422,409 @@ export const onDeleteBlogComment = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
@@ -355,8 +9836,573 @@ export const onDeleteBlogComment = /* GraphQL */ `
         tags
         post_img
         explanation
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        category {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
         categoryId
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserPostsId
@@ -365,6 +10411,301 @@ export const onDeleteBlogComment = /* GraphQL */ `
       }
       postId
       replycomments {
+        items {
+          id
+          comment
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          blogComment {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          commentId
+          post {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          postId
+          createdAt
+          updatedAt
+          blogUserRepliesId
+          blogPostReplycommentsId
+          blogCommentReplycommentsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -391,19 +10732,999 @@ export const onCreateReplyComment = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
       }
       userId
-      post {
+      blogComment {
         id
         name
         website
         email
         comment
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        post {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         postId
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserCommentsId
@@ -411,9 +11732,590 @@ export const onCreateReplyComment = /* GraphQL */ `
         __typename
       }
       commentId
+      post {
+        id
+        title
+        tags
+        post_img
+        explanation
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        userId
+        category {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
+        categoryId
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        blogUserPostsId
+        categoryPostPostsId
+        __typename
+      }
+      postId
       createdAt
       updatedAt
       blogUserRepliesId
+      blogPostReplycommentsId
       blogCommentReplycommentsId
       __typename
     }
@@ -434,19 +12336,999 @@ export const onUpdateReplyComment = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
       }
       userId
-      post {
+      blogComment {
         id
         name
         website
         email
         comment
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        post {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         postId
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserCommentsId
@@ -454,9 +13336,590 @@ export const onUpdateReplyComment = /* GraphQL */ `
         __typename
       }
       commentId
+      post {
+        id
+        title
+        tags
+        post_img
+        explanation
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        userId
+        category {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
+        categoryId
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        blogUserPostsId
+        categoryPostPostsId
+        __typename
+      }
+      postId
       createdAt
       updatedAt
       blogUserRepliesId
+      blogPostReplycommentsId
       blogCommentReplycommentsId
       __typename
     }
@@ -477,19 +13940,999 @@ export const onDeleteReplyComment = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
       }
       userId
-      post {
+      blogComment {
         id
         name
         website
         email
         comment
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
         userId
+        post {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         postId
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         blogUserCommentsId
@@ -497,9 +14940,590 @@ export const onDeleteReplyComment = /* GraphQL */ `
         __typename
       }
       commentId
+      post {
+        id
+        title
+        tags
+        post_img
+        explanation
+        user {
+          id
+          first_name
+          last_name
+          user_name
+          email
+          banner_pic
+          user_pic
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          categories {
+            items {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replies {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        userId
+        category {
+          id
+          title
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          posts {
+            items {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserCategoriesId
+          __typename
+        }
+        categoryId
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replycomments {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        blogUserPostsId
+        categoryPostPostsId
+        __typename
+      }
+      postId
       createdAt
       updatedAt
       blogUserRepliesId
+      blogPostReplycommentsId
       blogCommentReplycommentsId
       __typename
     }
@@ -520,12 +15544,667 @@ export const onCreateCategoryPost = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
       }
       userId
       posts {
+        items {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -551,12 +16230,667 @@ export const onUpdateCategoryPost = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
       }
       userId
       posts {
+        items {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         nextToken
         __typename
       }
@@ -582,12 +16916,667 @@ export const onDeleteCategoryPost = /* GraphQL */ `
         email
         banner_pic
         user_pic
+        posts {
+          items {
+            id
+            title
+            tags
+            post_img
+            explanation
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            category {
+              id
+              title
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              posts {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCategoriesId
+              __typename
+            }
+            categoryId
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserPostsId
+            categoryPostPostsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        categories {
+          items {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        comments {
+          items {
+            id
+            name
+            website
+            email
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            replycomments {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCommentsId
+            blogPostCommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        replies {
+          items {
+            id
+            comment
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            blogComment {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            commentId
+            post {
+              id
+              title
+              tags
+              post_img
+              explanation
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              category {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              categoryId
+              comments {
+                nextToken
+                __typename
+              }
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserPostsId
+              categoryPostPostsId
+              __typename
+            }
+            postId
+            createdAt
+            updatedAt
+            blogUserRepliesId
+            blogPostReplycommentsId
+            blogCommentReplycommentsId
+            __typename
+          }
+          nextToken
+          __typename
+        }
         createdAt
         updatedAt
         __typename
       }
       userId
       posts {
+        items {
+          id
+          title
+          tags
+          post_img
+          explanation
+          user {
+            id
+            first_name
+            last_name
+            user_name
+            email
+            banner_pic
+            user_pic
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            categories {
+              items {
+                id
+                title
+                userId
+                createdAt
+                updatedAt
+                blogUserCategoriesId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            comments {
+              items {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            replies {
+              items {
+                id
+                comment
+                userId
+                commentId
+                postId
+                createdAt
+                updatedAt
+                blogUserRepliesId
+                blogPostReplycommentsId
+                blogCommentReplycommentsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          userId
+          category {
+            id
+            title
+            user {
+              id
+              first_name
+              last_name
+              user_name
+              email
+              banner_pic
+              user_pic
+              posts {
+                nextToken
+                __typename
+              }
+              categories {
+                nextToken
+                __typename
+              }
+              comments {
+                nextToken
+                __typename
+              }
+              replies {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              __typename
+            }
+            userId
+            posts {
+              items {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            blogUserCategoriesId
+            __typename
+          }
+          categoryId
+          comments {
+            items {
+              id
+              name
+              website
+              email
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              replycomments {
+                nextToken
+                __typename
+              }
+              createdAt
+              updatedAt
+              blogUserCommentsId
+              blogPostCommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          replycomments {
+            items {
+              id
+              comment
+              user {
+                id
+                first_name
+                last_name
+                user_name
+                email
+                banner_pic
+                user_pic
+                createdAt
+                updatedAt
+                __typename
+              }
+              userId
+              blogComment {
+                id
+                name
+                website
+                email
+                comment
+                userId
+                postId
+                createdAt
+                updatedAt
+                blogUserCommentsId
+                blogPostCommentsId
+                __typename
+              }
+              commentId
+              post {
+                id
+                title
+                tags
+                post_img
+                explanation
+                userId
+                categoryId
+                createdAt
+                updatedAt
+                blogUserPostsId
+                categoryPostPostsId
+                __typename
+              }
+              postId
+              createdAt
+              updatedAt
+              blogUserRepliesId
+              blogPostReplycommentsId
+              blogCommentReplycommentsId
+              __typename
+            }
+            nextToken
+            __typename
+          }
+          createdAt
+          updatedAt
+          blogUserPostsId
+          categoryPostPostsId
+          __typename
+        }
         nextToken
         __typename
       }

@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "userSignUpTriggerInam",
+            "inamSESFunction",
             {
               "Fn::Join": [
                 "",
                 [
-                  "userSignUpTriggerInam",
+                  "inamSESFunction",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "inamblogprojectLambdaRolec302f3a0",
+            "inamblogprojectLambdaRole7d637548",
             {
               "Fn::Join": [
                 "",
                 [
-                  "inamblogprojectLambdaRolec302f3a0",
+                  "inamblogprojectLambdaRole7d637548",
                   "-",
                   {
                     "Ref": "env"

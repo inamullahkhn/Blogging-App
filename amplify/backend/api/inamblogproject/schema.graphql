@@ -15,7 +15,7 @@ type blogUser @model {
   comments: [blogComment] @hasMany
   replies: [replyComment] @hasMany
   createdAt: AWSDateTime!
-  # updatedAt: AWSDateTime!
+  updatedAt: AWSDateTime!
 }
 
 type blogPost @model {
@@ -29,6 +29,7 @@ type blogPost @model {
   category: categoryPost @belongsTo(fields: ["categoryId"])
   categoryId: ID!
   comments: [blogComment] @hasMany
+  replycomments: [replyComment] @hasMany
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
@@ -53,8 +54,10 @@ type replyComment @model {
   comment: String
   user: blogUser @belongsTo(fields: ["userId"])
   userId: ID!
-  post: blogComment @belongsTo(fields: ["commentId"])
+  blogComment: blogComment @belongsTo(fields: ["commentId"])
   commentId: ID!
+  post: blogPost @belongsTo(fields: ["postId"])
+  postId: ID!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
@@ -68,3 +71,24 @@ type categoryPost @model {
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
+
+type Response {
+  success: Boolean
+  message: String
+}
+
+type Mutation {
+  createContactUs(
+    subject: String!
+    name: String!
+    email: String!
+    explanation: String
+    image: String
+    createdAt: AWSDateTime
+    updatedAt: AWSDateTime
+  ): Response @function(name: "inamSESFunction-${env}")
+}
+
+# type Query {
+#   getContactUs(id: ID!): Response @function(name: "ContactUsMegaNewsTalhaFunction-${env}")
+# }

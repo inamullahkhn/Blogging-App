@@ -1,7 +1,27 @@
 import React from 'react'
 import PopularCard from './PopularCard'
+import { useSearch } from '@/app/context/userContext'
+import { blogPostsByTitleAndCategoryId } from '@/graphql/queries'
 
 const CategoryPosts = () => {
+  const { searchQuery } = useSearch()
+
+  // const popularPosts = data.filter((post) =>
+  //   post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  // )
+  const [category, setCategory] = useState(null)
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const { data } = await API.graphql(graphqlOperation(blogPostsByTitleAndCategoryId))
+        setCategory(data)
+      } catch (error) {
+        console.error('Error fetching todos:', error)
+      }
+    }
+    fetchPosts()
+  }, [])
+
   const data = [
     {
       id: 0,

@@ -46,23 +46,34 @@
     }
   },
   "function": {
+    "inamSESFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "userSignUpTriggerInam": {
       "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "GraphQLAPIIdOutput",
-            "GraphQLAPIEndpointOutput"
-          ],
-          "category": "api",
-          "resourceName": "inamblogproject"
-        }
-      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
+    "AMPLIFY_function_inamSESFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "inamSESFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_inamSESFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "inamSESFunction"
+        }
+      ]
+    },
     "AMPLIFY_function_userSignUpTriggerInam_deploymentBucketName": {
       "usedBy": [
         {

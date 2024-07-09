@@ -1,9 +1,52 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 import { CiBookmark } from 'react-icons/ci'
+import { Auth } from 'aws-amplify'
+import { StorageImage } from '@aws-amplify/ui-react-storage'
+import Link from 'next/link'
+import { useSearch } from '@/app/context/userContext'
+import { toast } from 'react-toastify'
 
 const Navbar = () => {
+  const [userData, setuserData] = useState(null)
+  const { setSearchQuery } = useSearch()
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value)
+  }
+
+  useEffect(() => {
+    const getUserData = async () => {
+      try {
+        const user = await Auth.currentAuthenticatedUser()
+        setuserData(user)
+        if (user) {
+          toast.success(`Welcome back ${user?.attributes?.preferred_username}`)
+        }
+      } catch (error) {
+        console.error('Error getting user data: ', error)
+      }
+    }
+    getUserData()
+  }, [])
+
+  async function handleSignOut() {
+    try {
+      const res = await Auth.signOut()
+      if (res) {
+        console.log('User signed out successfully')
+        window.location.href = '/'
+      }
+    } catch (error) {
+      console.log('error signing out: ', error)
+    }
+  }
+  useEffect(() => {
+    handleSignOut()
+  }, [])
+
   return (
     <div>
       <nav className='px-4 py-5 bg-white'>
@@ -54,6 +97,7 @@ const Navbar = () => {
                 type='search'
                 name='search'
                 placeholder='Search Anything'
+                onChange={handleSearchChange}
               />
               <button type='submit' className='absolute right-0 top-0 mt-5 mr-4'>
                 <svg
@@ -74,15 +118,48 @@ const Navbar = () => {
               </button>
             </div>
             <div className='flex space-x-10 items-center'>
-              <div className='flex space-x-1 items-center'>
-                <Image src='/cat.webp' alt='' width={40} height={40} className='rounded-md' />
-                <div>
-                  <IoIosArrowDown width={50} />
-                </div>
-              </div>
-              <div className='px-1 py-1 bg-slate-200 rounded-md'>
-                <CiBookmark className='text-2xl' />
-              </div>
+              {userData ? (
+                <>
+                  <div className='flex space-x-1 items-center'>
+                    <StorageImage
+                      imgKey={userData?.attributes?.profile || '/car.png'}
+                      width={44}
+                      height={44}
+                      className='rounded-md'
+                    />
+
+                    <div className='flex items-center'>
+                      <p>{userData?.attributes?.preferred_username}</p>
+                      <div className='dropdown dropdown-bottom'>
+                        <div tabIndex={0} role='' className='flex items-center space-x-1'>
+                          <IoIosArrowDown />
+                        </div>
+                        <ul tabIndex={0} className='dropdown-content menu rounded-box z-[1] w-52 p-2 shadow bg-white'>
+                          <li>
+                            <Link href='/editProfile'>
+                              <p>Profile</p>
+                            </Link>
+                          </li>
+                          <li>
+                            <p onClick={handleSignOut}>Logout</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='px-1 py-1 bg-slate-200 rounded-md'>
+                    <CiBookmark className='text-2xl' />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className='flex items-center'>
+                    <Link href='/sign-in'>
+                      <p>Login</p>
+                    </Link>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

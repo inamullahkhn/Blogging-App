@@ -1,7 +1,24 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import PopularCard from './PopularCard'
+import { listBlogPosts } from '@/graphql/queries'
+import { API, graphqlOperation } from 'aws-amplify'
 
 const PostCards = () => {
+  const [postdata, setPostData] = useState(null)
+  console.log(postdata)
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const { data } = await API.graphql(graphqlOperation(listBlogPosts))
+        setPostData(data.listBlogPosts.items)
+        console.log(data.listBlogPosts.items)
+      } catch (error) {
+        console.error('Error fetching todos:', error)
+      }
+    }
+    fetchPosts()
+  }, [])
   const data = [
     {
       id: 0,
@@ -120,9 +137,15 @@ const PostCards = () => {
     <div>
       <div>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 space-x-10 lg:grid-cols-4 gap-4'>
-          {data.map((item) => (
+          {postdata?.map((item) => (
             <div key={item.id} className=''>
-              <PopularCard title={item.title} image={item.image} description={item.description} user={item.user} />
+              <PopularCard
+                title={item.title}
+                id={item.id}
+                image={item.post_img}
+                description={item.explanation}
+                user={item.user}
+              />
             </div>
           ))}
         </div>

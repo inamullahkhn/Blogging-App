@@ -23,7 +23,7 @@ const SignUp = () => {
 
     async function signUp() {
       try {
-        const randomid = Math.floor(Math.random() * 100)
+        const randomid = Math.floor(Math.random() * 100 * 100)
         const profileimg = randomid + '' + profile?.name
         const bannerimg = randomid + '' + banner?.name
 

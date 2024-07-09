@@ -24,7 +24,11 @@
       "function": {
         "userSignUpTriggerInam": {
           "deploymentBucketName": "amplify-inamblogproject-dev-d6ddc-deployment",
-          "s3Key": "amplify-builds/userSignUpTriggerInam-366d6548454645314363-build.zip"
+          "s3Key": "amplify-builds/userSignUpTriggerInam-57656a544c2f516d4143-build.zip"
+        },
+        "inamSESFunction": {
+          "deploymentBucketName": "amplify-inamblogproject-dev-d6ddc-deployment",
+          "s3Key": "amplify-builds/inamSESFunction-7731374e50772b725035-build.zip"
         }
       }
     }
